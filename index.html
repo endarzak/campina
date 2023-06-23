@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>New Campina</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/campina/logo-campina.png">
+
+  <!-- CSS
+	============================================ -->
+
+  <!-- Icon Font CSS -->
+  <!-- <link rel="stylesheet" href="assets/css/plugins/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css"> -->
+
+  <!-- Plugins CSS -->
+  <!-- <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css"> -->
+
+  <!-- Main Style CSS -->
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
+  <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
+  <link rel="stylesheet" href="assets/css/vendor/plugins.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+
+  <!-- google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+    rel="stylesheet">
+
+  <!-- custom styles -->
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif !important;
+    }
+
+    :root {
+      --primary: #2475BB;
+      --primary-dark: #2D8CBA;
+      --primary-light: #50AFDD;
+      --secondary: #F2D246;
+      --secondary-dark: #ED8833;
+      --success: #009B83;
+      --muted: #3F3F3F;
+      --gray: #D7D7D7;
+      --black: #000000;
+      --white: #ffffff;
+    }
+
+    .container-fluid {
+      width: 90%;
+    }
+
+    .divider {
+      border: 1px solid var(--gray);
+      height: 14px !important;
+    }
+
+    input {
+      border-color: var(--primary) !important;
+    }
+
+    .off-canvas-box {
+      width: 100%;
+      left: -100%;
+    }
+
+    .header-wrapper .topbar,
+    .header-wrapper .header {
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 {
+      font-weight: 900;
+      font-size: 42px;
+    }
+
+    h2 {
+      font-weight: 900;
+    }
+
+    h6 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.04em;
+    }
+
+    .btn {
+      padding-block: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      border-radius: 12px;
+    }
+
+    .btn-block {
+      width: 100%;
+    }
+
+    .btn-lg {
+      padding-inline: 42px;
+      padding-block: 8px;
+      font-weight: 800;
+      text-transform: capitalize;
+    }
+
+    .btn:hover .btn-text {
+      transform: scale(.9);
+    }
+
+    .btn-primary-light:hover {
+      background: var(--primary-dark);
+      color: var(--white);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary-dark);
+      color: var(--black);
+    }
+
+    .btn-primary-light {
+      background-color: var(--primary-light);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background-color: var(--secondary);
+      color: var(--black);
+    }
+
+    .bg-primary-light {
+      background-color: var(--primary-light);
+    }
+
+    .bg-secondary {
+      background-color: var(--secondary) !important;
+    }
+
+    .bg-success {
+      background-color: var(--success);
+    }
+
+    .black-overlay::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .35);
+    }
+
+    /* ---------- TOPBAR ---------- */
+
+    .topbar {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 55px;
+    }
+
+    .topbar-left .topbar-menu,
+    .topbar-right .topbar-action {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .topbar-left .topbar-menu .topbar-menu-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 16px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: var(--muted);
+      background: #FFFFFF66;
+    }
+
+    .topbar-left .topbar-menu .topbar-menu-link.active {
+      font-weight: 700;
+      color: var(--black);
+      background: var(--secondary);
+    }
+
+    .topbar-left .topbar-menu .topbar-menu-link:hover {
+      color: var(--black);
+      background: var(--secondary);
+    }
+
+    .topbar-right .topbar-action {
+      gap: 23px;
+    }
+
+    .topbar-right .topbar-action a {
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .topbar-right .topbar-action a:hover,
+    .topbar-right .topbar-action .topbar-action-translation a:hover {
+      color: var(--secondary);
+    }
+
+    .topbar-right .topbar-action .topbar-action-translation {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .topbar-right .topbar-action .topbar-action-translation a {
+      font-weight: 500;
+      padding: 0px 8px;
+      color: var(--gray);
+    }
+
+    .topbar-right .topbar-action .topbar-action-translation a.active {
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    /* ---------- HEADER ---------- */
+
+    .header {
+      border-radius: 95px;
+      box-shadow: 2px 4px 8px rgba(73, 73, 73, 0.15);
+    }
+
+    .header .header-menu-left .nav-menu {
+      justify-content: flex-end;
+    }
+
+    .header .header-menu-right .nav-menu {
+      justify-content: flex-start;
+    }
+
+    .header .header-menu .nav-menu a {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+    }
+
+    .header .header-menu .nav-menu i {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .header .header-menu .nav-menu li:hover a {
+      color: var(--secondary);
+    }
+
+    .header .header-logo {
+      position: absolute;
+      top: -63px;
+    }
+
+    .header.sticky {
+      border-radius: 0;
+    }
+
+    .header.sticky .header-logo {
+      position: relative;
+      top: unset;
+    }
+
+    .header.sticky .header-logo img {
+      height: 70px;
+    }
+
+    .header-mobile {
+      position: relative;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      height: 500px;
+      width: auto;
+    }
+
+    /* ---------- CONTENT ---------- */
+
+    .content {
+      height: 100vh;
+    }
+
+    /* ---------- E-STORE ---------- */
+
+    .store {
+      margin-bottom: 50px;
+    }
+
+    .store-highlight {
+      background-color: var(--secondary);
+      border-radius: 18px;
+      box-shadow: 12px 12px 0px 0px var(--secondary-dark);
+      width: 349px;
+      height: 376px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .store-highlight .store-highlight-content {
+      padding-top: 27px;
+      padding-inline: 49px;
+    }
+
+    .store-highlight .store-highlight-content .store-highlight-text {
+      color: var(--white);
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 103%;
+      text-align: left;
+    }
+
+    .store-highlight .store-highlight-content .store-highlight-title {
+      color: var(--white);
+      text-shadow: 0px 5px 0px 0px var(--secondary-dark);
+      font-size: 80px;
+      font-weight: 900;
+      line-height: 1;
+      text-align: left;
+    }
+
+    /* ---------- PRODUCT ---------- */
+
+    .store-product {
+      font-family: 'Nunito', sans-serif !important;
+      border-radius: 18px;
+      background: var(--white);
+      padding: 0;
+      width: 230px;
+    }
+
+    .store-product .store-product-image img {
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .store-product .store-product-content {
+      padding: 18px;
+    }
+
+    .store-product .store-product-content .store-product-content-title {
+      color: var(--black);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      margin-bottom: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .store-product .store-product-content .store-product-content-price {
+      color: var(--black);
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 22px;
+      margin-bottom: 26px;
+    }
+
+    /* products */
+    #products {
+      background-image: url('assets/images/campina/vector.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: center;
+      background-position-y: bottom;
+    }
+
+    .product-tabs-content .product-content .title a {
+      font-size: 18px !important;
+      font-weight: 900;
+      line-height: 27px;
+    }
+
+    /* ---------- RESELLER ---------- */
+
+    .person-campina {
+      margin-bottom: 50px;
+    }
+    
+    .become-a-reseller {
+      padding-inline: 50px;
+      padding-bottom: 58px;
+      padding-top: 100px;
+      border-radius: 29px;
+      background-color: var(--white);
+      box-shadow: 12px 12px 0px 0px var(--secondary-dark);
+      z-index: 0;
+    }
+    
+    .become-a-reseller .become-a-reseller-decoration {
+      width: 100%;
+      height: 100%;
+      top: -10%;
+      left: 0;
+      z-index: -1;
+    }
+
+    .become-a-reseller .become-a-reseller-decoration img {
+      transform: scale(1.1);
+    }
+
+    .become-a-reseller .become-a-reseller-title {
+      color: var(--primary-light);
+      font-weight: 900;
+      line-height: 47px;
+      letter-spacing: 0em;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .become-a-reseller .become-a-reseller-text {
+      color: var(--black);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 27px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      margin-bottom: 41px;
+    }
+
+    .swiper .single-product-02 .product-hover-image {
+      display: none;
+    }
+
+    .swiper .single-product-02:hover .product-images::before,
+    .swiper .single-product-02:hover .product-hover-image {
+      display: block;
+    }
+
+    .swiper .single-product-02:hover img:not(.product-hover-image) {
+      display: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 20px;
+      background: white;
+      font-family: 'swiper-icons' !important;
+    }
+
+    .swiper-button-prev::before,
+    .swiper-button-next::before {
+      display: none;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 18px !important;
+      font-weight: bold !important;
+    }
+
+    .swiper-navigation-wrapper {
+      position: absolute;
+      bottom: 100px;
+      left: 10%;
+    }
+
+    .slider-active .swiper-button-prev,
+    .slider-active .swiper-button-next {
+      position: relative;
+      right: unset;
+      left: unset;
+    }
+    
+    #become-a-reseller {
+      padding-block: 66px;
+    }
+
+    #fun-creator {
+      padding-block: 66px;
+    }
+
+    #fun-creator h2 {
+      margin-bottom: 26px;
+    }
+
+    #fun-creator .container {
+      margin-bottom: 28px;
+    }
+
+    #products .main {
+      padding-block: 32px;
+    }
+
+    #products .main h2 {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 992px) {
+      .container-fluid {
+        width: 85%;
+      }
+
+      .topbar {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 86px;
+        line-height: 129px;
+      }
+
+      h2 {
+        font-size: 48px;
+        line-height: 72px;
+      }
+
+      h6 {
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.04em;
+      }
+
+      .btn-lg {
+        padding-inline: 81px;
+        padding-block: 12px;
+        font-size: 20px;
+      }
+
+      .hero-video {
+        height: auto;
+        width: 100%;
+      }
+
+      .store-wrapper {
+        padding-inline: 175px;
+      }
+
+      .store-highlight {
+        display: block;
+      }
+
+      .store-product-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+      
+      .become-a-reseller .become-a-reseller-decoration {
+        width: 100%;
+        height: 100%;
+        top: -20%;
+        left: 0;
+      }
+
+      .become-a-reseller .become-a-reseller-decoration img {
+        transform: scale(1.1);
+      }
+
+      #become-a-reseller {
+        padding-block: 155px;
+      }
+
+      #fun-creator {
+        padding-block: 126px;
+      }
+
+      #fun-creator h2 {
+        margin-bottom: 72px;
+      }
+
+      #fun-creator .container {
+        margin-bottom: 74px;
+      }
+
+      #products .main {
+        padding-block: 92px;
+      }
+
+      #products .main h2 {
+        margin-bottom: 44px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header-area p-0">
+    <!-- Topbar Start -->
+    <div class="topbar container">
+      <div class="topbar-left">
+        <div class="topbar-menu">
+          <a href="" class="topbar-menu-link active">Professional & Corporate</a>
+          <a href="" class="topbar-menu-link">Fun Creator</a>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-action">
+          <a href="">Campina Store</a>
+          <div class="topbar-action-translation">
+            <a href="" class="active">ID</a>
+            <hr class="divider">
+            <a href="">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Header Start  -->
+    <div class="container">
+      <div class="header header-sticky bg-white d-none d-lg-block">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="header-menu header-menu-left">
+              <ul class="nav-menu">
+                <li><a href="#">WHO WE ARE</a></li>
+                <li><a href="#">SUSTAINABILITY</a></li>
+                <li><a href="#">INVESTOR</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 position-relative d-flex justify-content-center">
+            <!-- Header Logo Start -->
+            <div class="header-logo">
+              <a href="#"><img src="assets/images/campina/logo-campina.png" alt="Logo" height="126"></a>
+            </div>
+            <!-- Header Logo End -->
+          </div>
+          <div class="col-lg-5">
+            <div class="header-menu header-menu-right">
+              <ul class="nav-menu">
+                <li><a href="#">CORPORATE GOVERNANCE</a></li>
+                <li><a href="#">MEDIA</a></li>
+                <li><a href="#"><i class="pe-7s-search"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+  </div>
+
+  <!-- Header Mobile Start -->
+  <div class="header-mobile section d-lg-none">
+
+    <!-- Header Mobile top Start -->
+    <div class="header-mobile-top header-sticky">
+      <div class="container">
+        <div class="row row-cols-3 gx-2 align-items-center">
+          <div class="col">
+            <!-- Header Toggle Start -->
+            <div class="header-toggle">
+              <button class="mobile-menu-open">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <!-- Header Toggle End -->
+          </div>
+          <div class="col">
+            <!-- Header Logo Start -->
+            <div class="header-logo text-center">
+              <a href="#"><img src="assets/images/campina/logo-campina.png" alt="Logo" height="50"></a>
+            </div>
+            <!-- Header Logo End -->
+          </div>
+          <div class="col">
+            <div class="topbar-right">
+              <div class="topbar-action justify-content-end">
+                <div class="topbar-action-translation">
+                  <a href="" class="active">ID</a>
+                  <hr class="divider">
+                  <a href="">EN</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header Mobile top End -->
+
+    <!-- Header Mobile Bottom End -->
+    <div class="header-mobile-bottom">
+      <div class="container">
+
+        <!-- Header Search Start -->
+        <div class="header-search">
+          <form action="#">
+            <input type="text" placeholder="Enter your search key ... ">
+            <button><i class="pe-7s-search"></i></button>
+          </form>
+        </div>
+        <!-- Header Search End -->
+
+      </div>
+    </div>
+    <!-- Header Mobile Bottom End -->
+
+  </div>
+  <!-- Header Mobile End -->
+
+  <!-- off Canvas Start -->
+  <div class="off-canvas-box">
+
+    <!-- Canvas Action Start -->
+    <div class="canvas-action justify-content-around">
+      <a class="action m-0" href="#">Professional & Corporate</span></a>
+      <a class="action m-0" href="#">Fun Creator</span></a>
+    </div>
+    <!-- Canvas Action end -->
+
+    <!-- Canvas Close bar Start -->
+    <div class="canvas-close-bar">
+      <span>Menu</span>
+      <a class="menu-close" href="javascript:;"><i class="pe-7s-angle-left"></i></a>
+    </div>
+    <!-- Canvas Close bar End -->
+
+    <!-- Canvas Menu Start -->
+    <div class="canvas-menu">
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#">WHO WE ARE</a></li>
+          <li><a href="#">SUSTAINABILITY</a></li>
+          <li><a href="#">INVESTOR</a></li>
+          <li><a href="#">CORPORATE GOVERNANCE</a></li>
+          <li><a href="#">MEDIA</a></li>
+        </ul>
+
+      </nav>
+    </div>
+    <!-- Canvas Menu End -->
+
+  </div>
+  <!-- off Canvas End -->
+
+  <div class="menu-overlay"></div>
+
+  <!-- hero section -->
+  <div class="hero position-relative d-flex justify-content-center align-items-center black-overlay">
+    <video playsinline autoplay muted loop class="hero-video">
+      <source src="assets/videos/Campina.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="position-absolute container d-flex flex-column align-items-center justify-content-center">
+      <h1 class="text-white text-center" style="margin-bottom: 14px;">Bring Happiness</h1>
+      <h6 class="text-white text-center" style="margin-bottom: 41px;">Kami merupakan salah satu produsen es krim ternama
+        di Indonesia, dengan rangkaian produk yang selalu menjadi juara di hati konsumen.</h6>
+      <a href="" class="btn btn-primary-light btn-lg">
+        <div class="btn-text">Learn More</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="bg-primary-light">
+    <!-- e-store section -->
+    <div id="e-store" style="padding-block: 66px;">
+      <div class="store-wrapper">
+        <h2 class="text-center text-white" style="margin-bottom: 44px;">Campina E-store</h2>
+        <div class="container-fluid overflow-auto">
+          <div class="store position-relative">
+            <div class="store-highlight text-center d-none d-lg-block">
+              <div class="store-highlight-content">
+                <p class="store-highlight-text">Diskon<br>Up to</p>
+                <h1 class="store-highlight-title">50%</h1>
+              </div>
+              <img src="assets/images/campina/e-store.png" alt="e-store" class="store-highlight-image">
+            </div>
+            <div class="store-product-wrapper d-flex align-items-center justify-content-lg-end">
+              <div class="d-flex" style="gap: 24px">
+                <div class="store-highlight text-center d-block d-lg-none">
+                  <div class="store-highlight-content">
+                    <p class="store-highlight-text">Diskon<br>Up to</p>
+                    <h1 class="store-highlight-title">50%</h1>
+                  </div>
+                  <img src="assets/images/campina/e-store.png" alt="e-store" class="store-highlight-image">
+                </div>
+                <div class="store-product">
+                  <div class="store-product-image">
+                    <img src="assets/images/campina/product-choco-stroberry.png" alt="choco stroberry">
+                  </div>
+                  <div class="store-product-content">
+                    <h5 class="store-product-content-title">Choco Strawberry</h5>
+                    <h6 class="store-product-content-price">Rp 3.000</h6>
+                    <a href="" class="btn btn-success btn-block">Beli</a>
+                  </div>
+                </div>
+                <div class="store-product">
+                  <div class="store-product-image">
+                    <img src="assets/images/campina/product-banana-split.png" alt="choco stroberry">
+                  </div>
+                  <div class="store-product-content">
+                    <h5 class="store-product-content-title">Banana Split 700ml</h5>
+                    <h6 class="store-product-content-price">Rp 43.000</h6>
+                    <a href="" class="btn btn-success btn-block">Beli</a>
+                  </div>
+                </div>
+                <div class="store-product">
+                  <div class="store-product-image">
+                    <img src="assets/images/campina/product-blueberry-choco-chunk.png" alt="choco stroberry">
+                  </div>
+                  <div class="store-product-content">
+                    <h5 class="store-product-content-title">Blueberry Choco Chunk 700ml</h5>
+                    <h6 class="store-product-content-price">Rp 74.000</h6>
+                    <a href="" class="btn btn-success btn-block">Beli</a>
+                  </div>
+                </div>
+                <div class="store-product">
+                  <div class="store-product-image">
+                    <img src="assets/images/campina/product-cashew-nut.png" alt="choco stroberry">
+                  </div>
+                  <div class="store-product-content">
+                    <h5 class="store-product-content-title">Cashew Nut</h5>
+                    <h6 class="store-product-content-price">Rp 7.000</h6>
+                    <a href="" class="btn btn-success btn-block">Beli</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <center>
+          <a href="" class="btn btn-secondary btn-lg">
+            <div class="btn-text">View All</div>
+          </a>
+        </center>
+      </div>
+    </div>
+    <!-- products section -->
+    <div id="products">
+      <div class="main">
+        <h2 class="text-center text-white" style="margin-bottom: 44px;">Our Product</h2>
+    
+        <div class="container" style="margin-bottom: 45px;">
+          <div class="product-tabs-content position-relative">
+            <!-- Slider main container -->
+            <div class="swiper overflow-hidden">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="single-product-02">
+                    <div class="product-images d-flex align-items-center justify-content-center">
+                      <a href="#">
+                        <img src="assets/images/campina/neapolitan-box.png" height="266" class="center"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                        <img src="assets/images/campina/neapolitan-hover.png" height="266"
+                          class="center product-hover-image" style="max-width: 250px; object-fit: contain;" alt="product">
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h4 class="title"><a href="#" class="text-white fs-4">Neapolitan</a></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single-product-02">
+                    <div class="product-images d-flex align-items-center justify-content-center">
+                      <a href="#">
+                        <img src="assets/images/campina/mochi.png" height="266" class="center"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                        <img src="assets/images/campina/mochi-hover.png" height="266" class="center product-hover-image"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h4 class="title"><a href="#" class="text-white fs-4">Mochi Duo</a></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single-product-02">
+                    <div class="product-images d-flex align-items-center justify-content-center">
+                      <a href="#">
+                        <img src="assets/images/campina/ariel2.png" height="266" class="center"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                        <img src="assets/images/campina/ariel-hover.png" height="266" class="center product-hover-image"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h4 class="title"><a href="#" class="text-white fs-4">Ariel</a></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single-product-02">
+                    <div class="product-images d-flex align-items-center justify-content-center">
+                      <a href="#">
+                        <img src="assets/images/campina/happy-cow2.png" height="266" class="center"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                        <img src="assets/images/campina/happy-cow-hover.png" height="266" class="center product-hover-image"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h4 class="title"><a href="#" class="text-white fs-4">Happy Cow</a></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single-product-02">
+                    <div class="product-images d-flex align-items-center justify-content-center">
+                      <a href="#">
+                        <img src="assets/images/campina/hula-hula.png" height="266" class="center"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                        <img src="assets/images/campina/hula-hula-hover.png" height="266" class="center product-hover-image"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h4 class="title"><a href="#" class="text-white fs-4">Hula Hula</a></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single-product-02">
+                    <div class="product-images d-flex align-items-center justify-content-center">
+                      <a href="#">
+                        <img src="assets/images/campina/cashew2.png" height="266" class="center"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                        <img src="assets/images/campina/cashew-hover.png" height="266" class="center product-hover-image"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h4 class="title"><a href="#" class="text-white fs-4">Cashew</a></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single-product-02">
+                    <div class="product-images d-flex align-items-center justify-content-center">
+                      <a href="#">
+                        <img src="assets/images/campina/frozen2.png" height="266" class="center"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                        <img src="assets/images/campina/frozen-hover.png" height="266" class="center product-hover-image"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h4 class="title"><a href="#" class="text-white fs-4">Frozen</a></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="single-product-02">
+                    <div class="product-images d-flex align-items-center justify-content-center">
+                      <a href="#">
+                        <img src="assets/images/campina/heart2.png" height="266" class="center"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                        <img src="assets/images/campina/heart-hover.png" height="266" class="center product-hover-image"
+                          style="max-width: 250px; object-fit: contain;" alt="product">
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h4 class="title"><a href="#" class="text-white fs-4">Heart</a></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+    
+        <center>
+          <a href="" class="btn btn-secondary btn-lg">
+            <div class="btn-text">View All</div>
+          </a>
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-secondary">
+    <!-- fun creator section -->
+    <div id="fun-creator">
+      <h2 class="text-center text-white">
+        <img src="assets/images/campina/youtube.png" alt="youtube logo" height="52" style="margin-right: 26px;">
+        Fun Creator
+      </h2>
+      <div class="container">
+        <div class="product-tabs-content position-relative">
+          <!-- Slider main container -->
+          <div class="swiper-creator overflow-hidden">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="single-product">
+                  <div class="product-images d-flex align-items-center justify-content-center">
+                    <a href="#">
+                      <img src="assets/images/campina/creator-banana-split.png" height="308" alt="creator">
+                    </a>
+                  </div>
+                  <div class="product-content p-0" style="margin-top: 23px;">
+                    <h4 class="title"><a href="#" class="text-center text-white fs-4">Banana Split</a></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="single-product">
+                  <div class="product-images d-flex align-items-center justify-content-center">
+                    <a href="#">
+                      <img src="assets/images/campina/creator-waffle-vanilla.png" height="308" alt="creator">
+                    </a>
+                  </div>
+                  <div class="product-content p-0" style="margin-top: 23px;">
+                    <h4 class="title"><a href="#" class="text-center text-white fs-4">Waffle Vanilla</a></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="single-product">
+                  <div class="product-images d-flex align-items-center justify-content-center">
+                    <a href="#">
+                      <img src="assets/images/campina/creator-es-krim-roti.png" height="308" alt="creator">
+                    </a>
+                  </div>
+                  <div class="product-content p-0" style="margin-top: 23px;">
+                    <h4 class="title"><a href="#" class="text-center text-white fs-4">Es Krim Roti</a></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="single-product">
+                  <div class="product-images d-flex align-items-center justify-content-center">
+                    <a href="#">
+                      <img src="assets/images/campina/creator-banana-split.png" height="308" alt="creator">
+                    </a>
+                  </div>
+                  <div class="product-content p-0" style="margin-top: 23px;">
+                    <h4 class="title"><a href="#" class="text-center text-white fs-4">Banana Split</a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+      <center>
+        <a href="" class="btn btn-primary-light btn-lg">
+          <div class="btn-text">View All</div>
+        </a>
+      </center>
+    </div>
+    <!-- become a reseller section -->
+    <div id="become-a-reseller" class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <img src="assets/images/campina/person-campina.png" alt="person campina" class="person-campina">
+        </div>
+        <div class="col-lg-7">
+          <div class="become-a-reseller position-relative">
+            <div class="become-a-reseller-decoration d-flex align-items-start justify-content-center position-absolute">
+              <img src="assets/images/campina/reseller-decoration.png" alt="reseller top decoration">
+            </div>
+            <h2 class="become-a-reseller-title">Become a Reseller ?</h2>
+            <p class="become-a-reseller-text">Kami merupakan salah satu produsen es krim ternama di Indonesia, dengan rangkaian produk yang selalu menjadi juara di hati konsumen.</p>
+            <center>
+              <a href="" class="btn btn-primary-light btn-lg">
+                <div class="btn-text">Join Now</div>
+              </a>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Back To Start-->
+  <a href="#" class="back-to-top">
+    <i class="pe-7s-angle-up"></i>
+  </a>
+  <!--Back To End-->
+
+  <!-- JS
+    ============================================ -->
+
+  <!-- Modernizer & jQuery JS -->
+  <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <!-- <script src="assets/js/plugins/popper.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script> -->
+
+  <!-- Plugins JS -->
+  <!-- <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/ajax-contact.js"></script>
+    <script src="assets/js/plugins/appear.js"></script>
+    <script src="assets/js/plugins/odometer.min.js"></script>
+    <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="assets/js/plugins/select2.min.js"></script>
+    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/plugins/jquery.zoom.min.js"></script> -->
+
+  <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
+  <script src="assets/js/plugins.min.js"></script>
+
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- swipper -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+          }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    const swiperCreator = new Swiper('.swiper-creator', {
+        slidesPerView: 1,
+        loop: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 4,
+          }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+  </script>
+
+</body>
+
+</html>
