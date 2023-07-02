@@ -9,6 +9,7 @@
   --secondary: #F2D246;
   --secondary-dark: #ED8833;
   --success: #009B83;
+  --danger: #FF7D94;
   --muted: #3F3F3F;
   --gray: #D7D7D7;
   --blue: #2457AB;
@@ -132,6 +133,10 @@ h6 {
 
 .bg-blue {
   background-color: var(--blue);
+}
+
+.bg-danger {
+  background-color: var(--danger);
 }
 
 .text-black {
@@ -465,10 +470,14 @@ h6 {
 
 /* ---------- PRODUCT CONTENT ---------- */
 
-.product-content {
-  background-color: #DBF3FF;
+.product-page-content,
+.fun-creator-page-content {
   padding-top: 57px;
   padding-bottom: 200px;
+}
+
+.product-page-content {
+  background-color: #DBF3FF;
 }
 
 .product-tabs .product-tabs-menu {
@@ -516,6 +525,29 @@ h6 {
   max-width: 250px;
   object-fit: contain;
   z-index: 1;
+}
+
+/* ---------- FUN CREATOR CONTENT ---------- */
+
+.fun-creator-page-content {
+  background-color: var(--secondary);
+  background-image: url('/assets/images/campina/bg-fun-creator-content.png');
+}
+
+.fun-creator-page-content-menu a {
+  padding-inline: 14px;
+  padding-block: 11px;
+  display: block;
+  width: 100%;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  border-radius: 10px;
+}
+
+.fun-creator-page-content-menu img {
+  margin-right: 43px;
 }
 
 /* swiper */
@@ -607,6 +639,10 @@ h6 {
 
 .mitra-campina {
   height: 80px;
+}
+
+.page-content-title {
+  padding-block: 30px;
 }
 
 @media (min-width: 992px) {
@@ -744,5 +780,9 @@ h6 {
   .product-tabs .product-tabs-menu {
     gap: 36px;
     margin-bottom: 97px;
+  }
+
+  .page-content-title {
+    padding-block: 59px;
   }
 }
