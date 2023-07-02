@@ -871,4 +871,8 @@ h6 {
   #carrers table {
     margin-top: 125px;
   }
+
+  .overflow-lg-visible {
+    overflow: visible !important;
+  }
 }
