@@ -79,9 +79,10 @@ h6 {
 .btn {
   padding-block: 8px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 22px;
   border-radius: 12px;
+  text-transform: capitalize;
 }
 
 .btn-block {
@@ -90,6 +91,13 @@ h6 {
 
 .btn-lg {
   padding-inline: 42px;
+  padding-block: 8px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.btn-md {
+  padding-inline: 46px;
   padding-block: 8px;
   font-weight: 800;
   text-transform: capitalize;
@@ -114,8 +122,19 @@ h6 {
   color: var(--white);
 }
 
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 .btn-secondary {
   background-color: var(--secondary);
+  color: var(--black);
+}
+
+.btn-outline-black {
+  background-color: var(--white);
+  border: 1px solid var(--black);
   color: var(--black);
 }
 
@@ -143,6 +162,14 @@ h6 {
   color: var(--black);
 }
 
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-primary-light {
+  color: var(--primary-light) !important;
+}
+
 .badge {
   display: flex;
   align-items: center;
@@ -159,6 +186,22 @@ h6 {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, .35);
+}
+
+.nav-tabs .nav-link {
+  border-radius: 0;
+  border: none;
+  width: max-content;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link.active {
+  border-radius: 0;
+  border-bottom: 2px solid var(--primary);
 }
 
 /* ---------- TOPBAR ---------- */
@@ -550,6 +593,44 @@ h6 {
   margin-right: 43px;
 }
 
+/* ---------- LIFE AT CAMPINA CONTENT ---------- */
+
+.life-at-campina-page-content {
+  padding-top: 93px;
+  padding-bottom: 45px;
+}
+
+#carrers table tbody td {
+  padding-block: 10px;
+}
+
+#carrers table tbody td:first-child div {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
+#carrers table tbody td:last-child div {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+#carrers {
+  background-color: #F5F9FA;
+  padding-top: 89px;
+  padding-bottom: 141px;
+  margin-top: 100px;
+}
+
+#carrers .row,
+#carrers table {
+  margin-top: 52px;
+}
+
+.life-at-campina-page-content .nav {
+  margin-top: 97px;
+  margin-bottom: 100px;
+}
+
 /* swiper */
 
 .swiper .single-product-02 .product-hover-image {
@@ -784,5 +865,10 @@ h6 {
 
   .page-content-title {
     padding-block: 59px;
+  }
+
+  #carrers .row,
+  #carrers table {
+    margin-top: 125px;
   }
 }
