@@ -1,0 +1,748 @@
+*:not([class^=pe-7s-]) {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+:root {
+  --primary: #2475BB;
+  --primary-dark: #2D8CBA;
+  --primary-light: #50AFDD;
+  --secondary: #F2D246;
+  --secondary-dark: #ED8833;
+  --success: #009B83;
+  --muted: #3F3F3F;
+  --gray: #D7D7D7;
+  --blue: #2457AB;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+.container-fluid {
+  width: 90%;
+}
+
+.divider {
+  border: 1px solid var(--gray);
+  height: 14px !important;
+}
+
+input {
+  border-color: var(--primary) !important;
+}
+
+.off-canvas-box {
+  width: 100%;
+  left: -100%;
+}
+
+.header-wrapper .topbar,
+.header-wrapper .header {
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 42px;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+}
+
+.header-search .input {
+  border: none;
+}
+
+.input {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  color: var(--black);
+  padding: 16px;
+  border: none;
+  border-bottom: 2px solid var(--black) !important;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btn {
+  padding-block: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  border-radius: 12px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-lg {
+  padding-inline: 42px;
+  padding-block: 8px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.btn:hover .btn-text {
+  transform: scale(.9);
+}
+
+.btn-primary-light:hover {
+  background: var(--primary-dark);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-dark);
+  color: var(--black);
+}
+
+.btn-primary-light {
+  background-color: var(--primary-light);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--black);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.bg-success {
+  background-color: var(--success);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10px;
+  padding-block: 5px;
+  border-radius: 47px;
+}
+
+.black-overlay::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .35);
+}
+
+/* ---------- TOPBAR ---------- */
+
+.topbar {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 55px;
+}
+
+.topbar-left .topbar-menu,
+.topbar-right .topbar-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar-left .topbar-menu .topbar-menu-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--muted);
+  background: #FFFFFF66;
+}
+
+.topbar-left .topbar-menu .topbar-menu-link.active {
+  font-weight: 700;
+  color: var(--black);
+  background: var(--secondary);
+}
+
+.topbar-left .topbar-menu .topbar-menu-link:hover {
+  color: var(--black);
+  background: var(--secondary);
+}
+
+.topbar-right .topbar-action {
+  gap: 23px;
+}
+
+.topbar-right .topbar-action a {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.topbar-right .topbar-action a:hover,
+.topbar-right .topbar-action .topbar-action-translation a:hover {
+  color: var(--secondary);
+}
+
+.topbar-right .topbar-action .topbar-action-translation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.topbar-right .topbar-action .topbar-action-translation a {
+  font-weight: 500;
+  padding: 0px 8px;
+  color: var(--gray);
+}
+
+.topbar-right .topbar-action .topbar-action-translation a.active {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+  border-radius: 95px;
+  box-shadow: 2px 4px 8px rgba(73, 73, 73, 0.15);
+}
+
+.header .header-menu-left .nav-menu {
+  justify-content: flex-end;
+}
+
+.header .header-menu-right .nav-menu {
+  justify-content: flex-start;
+}
+
+.header .header-menu .nav-menu a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+}
+
+.header .header-menu .nav-menu i {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.header .header-menu .nav-menu li:hover a {
+  color: var(--secondary);
+}
+
+.header .header-logo {
+  position: absolute;
+  top: -63px;
+}
+
+.header.sticky {
+  border-radius: 0;
+}
+
+.header.sticky .header-logo {
+  position: relative;
+  top: unset;
+}
+
+.header.sticky .header-logo img {
+  height: 70px;
+}
+
+.header-mobile {
+  position: relative;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video {
+  height: 500px;
+  width: auto;
+}
+
+/* ---------- PAGE TITLE ---------- */
+
+.page-title,
+.page-title img {
+  width: 100%;
+}
+
+/* ---------- CONTENT ---------- */
+
+.content {
+  height: 100vh;
+}
+
+/* ---------- E-STORE ---------- */
+
+.store {
+  margin-bottom: 50px;
+}
+
+.store-highlight {
+  background-color: var(--secondary);
+  border-radius: 18px;
+  box-shadow: 12px 12px 0px 0px var(--secondary-dark);
+  width: 349px;
+  height: 376px;
+  overflow: hidden;
+  display: none;
+}
+
+.store-highlight .store-highlight-content {
+  padding-top: 27px;
+  padding-inline: 49px;
+}
+
+.store-highlight .store-highlight-content .store-highlight-text {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 103%;
+  text-align: left;
+}
+
+.store-highlight .store-highlight-content .store-highlight-title {
+  color: var(--white);
+  text-shadow: 0px 5px 0px 0px var(--secondary-dark);
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: left;
+}
+
+/* ---------- PRODUCT ---------- */
+
+.store-product {
+  font-family: 'Nunito', sans-serif !important;
+  border-radius: 18px;
+  background: var(--white);
+  padding: 0;
+  width: 230px;
+}
+
+.store-product .store-product-image img {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.store-product .store-product-content {
+  padding: 18px;
+}
+
+.store-product .store-product-content .store-product-content-title {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.store-product .store-product-content .store-product-content-price {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 22px;
+  margin-bottom: 26px;
+}
+
+/* products */
+#products {
+  background-image: url('assets/images/campina/vector.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: bottom;
+}
+
+.product-tabs-content .product-content .title a {
+  font-size: 18px !important;
+  font-weight: 900;
+  line-height: 27px;
+}
+
+/* ---------- RESELLER ---------- */
+
+.person-campina {
+  margin-bottom: 50px;
+}
+
+.become-a-reseller {
+  padding-inline: 50px;
+  padding-bottom: 58px;
+  padding-top: 100px;
+  border-radius: 29px;
+  background-color: var(--white);
+  box-shadow: 12px 12px 0px 0px var(--secondary-dark);
+  z-index: 0;
+}
+
+.become-a-reseller .become-a-reseller-decoration {
+  width: 100%;
+  height: 100%;
+  top: -10%;
+  left: 0;
+  z-index: -1;
+}
+
+.become-a-reseller .become-a-reseller-decoration img {
+  transform: scale(1.07);
+}
+
+.become-a-reseller .become-a-reseller-title {
+  color: var(--primary-light);
+  font-weight: 900;
+  line-height: 47px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.become-a-reseller .become-a-reseller-text {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* ---------- INSIDE CAMPINA ---------- */
+
+.inside-campina-item {
+  border-radius: 18px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.inside-campina-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- PRODUCT CONTENT ---------- */
+
+.product-content {
+  background-color: #DBF3FF;
+  padding-top: 57px;
+  padding-bottom: 200px;
+}
+
+.product-tabs .product-tabs-menu {
+  gap: 14px;
+  margin-bottom: 42px;
+}
+
+.product-tabs .product-tabs-menu a {
+  width: 96px;
+  height: 75px;
+  border-radius: 10px;
+  border: 1px solid #ADDAF0;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+}
+
+.product-tabs .product-tabs-menu a:hover,
+.product-tabs .product-tabs-menu a.active {
+  color: #3798C7;
+  border: 2px solid #3798C7;
+}
+
+.product-tabs-content .product-tabs-content-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('/assets/images/campina/back-product.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.product-tabs-content .product-tabs-content-item img {
+  height: 266px;
+  max-width: 250px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* swiper */
+
+.swiper .single-product-02 .product-hover-image {
+  display: none;
+}
+
+.swiper .single-product-02:hover .product-images::before,
+.swiper .single-product-02:hover .product-hover-image {
+  display: block;
+}
+
+.swiper .single-product-02:hover img:not(.product-hover-image) {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 20px;
+  background: white;
+  font-family: 'swiper-icons' !important;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  display: none;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+.swiper-navigation-wrapper {
+  position: absolute;
+  bottom: 100px;
+  left: 10%;
+}
+
+.slider-active .swiper-button-prev,
+.slider-active .swiper-button-next {
+  position: relative;
+  right: unset;
+  left: unset;
+}
+
+#become-a-reseller {
+  padding-block: 66px;
+}
+
+#fun-creator,
+#inside-campina {
+  padding-block: 66px;
+}
+
+#fun-creator h2 {
+  margin-bottom: 26px;
+}
+
+#fun-creator .container {
+  margin-bottom: 28px;
+}
+
+#products .main {
+  padding-block: 32px;
+}
+
+#products .main h2 {
+  margin-bottom: 0;
+}
+
+#inside-campina .title {
+  margin-bottom: 26px;
+}
+
+#footer-top {
+  padding-top: 32px;
+  padding-bottom: 18px;
+}
+
+#footer-bottom {
+  padding-top: 14px;
+  padding-bottom: 20px;
+}
+
+.mitra-campina {
+  height: 80px;
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    width: 85%;
+  }
+
+  .topbar {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 86px;
+    line-height: 129px;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.04em;
+  }
+
+  .btn-lg {
+    padding-inline: 81px;
+    padding-block: 12px;
+    font-size: 20px;
+  }
+
+  .hero-video {
+    height: auto;
+    width: 100%;
+  }
+
+  .store-wrapper {
+    padding-inline: 175px;
+  }
+
+  .store-highlight {
+    display: block;
+  }
+
+  .store-product-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .become-a-reseller .become-a-reseller-decoration {
+    width: 100%;
+    height: 100%;
+    top: -20%;
+    left: 0;
+  }
+
+  .become-a-reseller .become-a-reseller-decoration img {
+    transform: scale(1.1);
+  }
+
+  #become-a-reseller {
+    padding-top: 155px;
+    padding-bottom: 150px;
+  }
+
+  #fun-creator {
+    padding-block: 126px;
+  }
+
+  #fun-creator h2 {
+    margin-bottom: 72px;
+  }
+
+  #fun-creator .container {
+    margin-bottom: 74px;
+  }
+
+  #products .main {
+    padding-block: 92px;
+  }
+
+  #products .main h2 {
+    margin-bottom: 44px;
+  }
+
+  #inside-campina {
+    padding-block: 150px;
+  }
+
+  .person-campina {
+    margin-bottom: 0;
+  }
+
+  .become-a-reseller .become-a-reseller-title {
+    margin-bottom: 25px;
+  }
+
+  .become-a-reseller .become-a-reseller-text {
+    font-size: 16px;
+    margin-bottom: 41px;
+  }
+
+  #inside-campina .title {
+    margin-bottom: 60px;
+  }
+
+  #footer-top {
+    padding-top: 70px;
+    padding-bottom: 24px;
+  }
+
+  .qr-code {
+    border-radius: 19px;
+    padding: 9px;
+    box-shadow: 0px 0px 20px 0px #0000001A;
+  }
+
+  #footer-bottom {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .mitra-campina {
+    height: unset;
+  }
+
+  .page-title .page-title-wrapper {
+    padding-block: 120px;
+  }
+
+  .product-tabs .product-tabs-menu {
+    gap: 36px;
+    margin-bottom: 97px;
+  }
+}
