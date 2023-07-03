@@ -437,11 +437,30 @@ h6 {
 
 /* products */
 #products {
-  background-image: url('assets/images/campina/vector.png');
+  background-image: url('/assets/images/campina/Vector.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
   background-position-y: bottom;
+}
+
+.product-tabs-content .single-product-02 .product-images {
+  z-index: 0;
+}
+
+.product-tabs-content .single-product-02:hover .product-images::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('/assets/images/campina/back-product-hover.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .product-tabs-content .product-content .title a {
@@ -561,6 +580,16 @@ h6 {
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+.product-tabs-content .product-tabs-content-item:hover::before {
+  background-image: url('/assets/images/campina/back-product-hover.png');
+  transition: all ease-in-out 300ms;
+}
+
+.product-tabs-content .product-tabs-content-item:nth-child(even):hover::before {
+  background-image: url('/assets/images/campina/back-product-hover-center.png');
+  transition: all ease-in-out 300ms;
 }
 
 .product-tabs-content .product-tabs-content-item img {
@@ -683,6 +712,32 @@ h6 {
   padding-block: 66px;
 }
 
+#inside-campina::before,
+#fun-creator::before {
+  content: '';
+  position: absolute;
+  display: block;
+  background-image: url('/assets/images/campina/decoration-star.png');
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  width: 204px;
+  height: 319px;
+}
+
+#inside-campina::after,
+#fun-creator::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-image: url('/assets/images/campina/decoration-star-2.png');
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  width: 199px;
+  height: 333px;
+}
+
 #fun-creator,
 #inside-campina {
   padding-block: 66px;
@@ -719,11 +774,22 @@ h6 {
 }
 
 .mitra-campina {
+  bottom: 100px;
+  right: 20px;
+  z-index: 10;
+}
+
+.mitra-campina img {
   height: 80px;
 }
 
 .page-content-title {
   padding-block: 30px;
+}
+
+.parallax-scroll {
+  z-index: 2;
+  width: 35%;
 }
 
 @media (min-width: 992px) {
@@ -850,7 +916,7 @@ h6 {
     padding-bottom: 40px;
   }
 
-  .mitra-campina {
+  .mitra-campina img {
     height: unset;
   }
 
@@ -874,5 +940,9 @@ h6 {
 
   .overflow-lg-visible {
     overflow: visible !important;
+  }
+
+  .parallax-scroll {
+    width: unset;
   }
 }

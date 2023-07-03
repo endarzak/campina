@@ -52,8 +52,8 @@
     <div class="topbar container">
       <div class="topbar-left">
         <div class="topbar-menu">
-          <a href="" class="topbar-menu-link active">Professional & Corporate</a>
-          <a href="" class="topbar-menu-link">Fun Creator</a>
+          <a href="javascript:;" class="topbar-menu-link active" data-type="pro">Professional & Corporate</a>
+          <a href="javascript:;" class="topbar-menu-link" data-type="fun">Fun Creator</a>
         </div>
       </div>
       <div class="topbar-right">
@@ -75,10 +75,14 @@
         <div class="row align-items-center">
           <div class="col-lg-5">
             <div class="header-menu header-menu-left">
-              <ul class="nav-menu">
+              <ul class="nav-menu pro">
                 <li><a href="#">WHO WE ARE</a></li>
                 <li><a href="#">SUSTAINABILITY</a></li>
                 <li><a href="#">INVESTOR</a></li>
+              </ul>
+              <ul class="nav-menu fun d-none">
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">FUN CREATOR</a></li>
               </ul>
             </div>
           </div>
@@ -91,9 +95,14 @@
           </div>
           <div class="col-lg-5">
             <div class="header-menu header-menu-right">
-              <ul class="nav-menu">
+              <ul class="nav-menu pro">
                 <li><a href="#">CORPORATE GOVERNANCE</a></li>
                 <li><a href="#">MEDIA</a></li>
+                <li><a href="#"><i class="pe-7s-search"></i></a></li>
+              </ul>
+              <ul class="nav-menu fun d-none">
+                <li><a href="#">LIFE AT CAMPINA</a></li>
+                <li><a href="#">KONTAK</a></li>
                 <li><a href="#"><i class="pe-7s-search"></i></a></li>
               </ul>
             </div>
@@ -170,8 +179,8 @@
 
     <!-- Canvas Action Start -->
     <div class="canvas-action justify-content-around">
-      <a class="action m-0" href="#">Professional & Corporate</span></a>
-      <a class="action m-0" href="#">Fun Creator</span></a>
+      <a class="action m-0" href="javascript:;" data-type="pro">Professional & Corporate</span></a>
+      <a class="action m-0" href="javascript:;" data-type="fun">Fun Creator</span></a>
     </div>
     <!-- Canvas Action end -->
 
@@ -185,14 +194,19 @@
     <!-- Canvas Menu Start -->
     <div class="canvas-menu">
       <nav>
-        <ul class="nav-menu">
+        <ul class="nav-menu pro">
           <li><a href="#">WHO WE ARE</a></li>
           <li><a href="#">SUSTAINABILITY</a></li>
           <li><a href="#">INVESTOR</a></li>
           <li><a href="#">CORPORATE GOVERNANCE</a></li>
           <li><a href="#">MEDIA</a></li>
         </ul>
-
+        <ul class="nav-menu fun d-none">
+          <li><a href="#">PRODUCT</a></li>
+          <li><a href="#">FUN CREATOR</a></li>
+          <li><a href="#">LIFE AT CAMPINA</a></li>
+          <li><a href="#">KONTAK</a></li>
+        </ul>
       </nav>
     </div>
     <!-- Canvas Menu End -->
@@ -404,8 +418,8 @@
   </div>
 
   <!-- floating -->
-  <a href="#" class="position-fixed" style="bottom: 200px; right: 20px;">
-    <img src="assets/images/campina/mitra-campina.png" alt="mitra campina" class="mitra-campina">
+  <a href="#" class="position-fixed mitra-campina">
+    <img src="assets/images/campina/mitra-campina.png" alt="mitra campina">
   </a>
 
   <!--Back To Start-->
@@ -442,30 +456,8 @@
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 
-  <!-- swipper -->
-  <script>
-    const menus = document.querySelectorAll('.product-tabs-menu a')
-    const products = document.querySelectorAll('.product-tabs-content .product-tabs-content-item')
-    menus.forEach(menu => {
-      menu.addEventListener('click', e => {
-        e.preventDefault()
-        const dataType = e.target.dataset.type
-
-        menus.forEach(m => {
-          m.classList.remove('active')
-        })
-        e.target.classList.add('active')
-
-        products.forEach(product => {
-          if (dataType === 'all') {
-            product.classList.remove('d-none')
-          } else {
-            product.classList.contains(dataType) ? product.classList.remove('d-none') : product.classList.add('d-none')
-          }
-        })
-      })
-    })
-  </script>
+  <!-- custom -->
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

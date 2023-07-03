@@ -43,6 +43,9 @@
 
   <!-- custom styles -->
   <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- parallax -->
+  <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css">
 </head>
 
 <body>
@@ -52,8 +55,8 @@
     <div class="topbar container">
       <div class="topbar-left">
         <div class="topbar-menu">
-          <a href="" class="topbar-menu-link active">Professional & Corporate</a>
-          <a href="" class="topbar-menu-link">Fun Creator</a>
+          <a href="javascript:;" class="topbar-menu-link active" data-type="pro">Professional & Corporate</a>
+          <a href="javascript:;" class="topbar-menu-link" data-type="fun">Fun Creator</a>
         </div>
       </div>
       <div class="topbar-right">
@@ -75,10 +78,14 @@
         <div class="row align-items-center">
           <div class="col-lg-5">
             <div class="header-menu header-menu-left">
-              <ul class="nav-menu">
+              <ul class="nav-menu pro">
                 <li><a href="#">WHO WE ARE</a></li>
                 <li><a href="#">SUSTAINABILITY</a></li>
                 <li><a href="#">INVESTOR</a></li>
+              </ul>
+              <ul class="nav-menu fun d-none">
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">FUN CREATOR</a></li>
               </ul>
             </div>
           </div>
@@ -91,9 +98,14 @@
           </div>
           <div class="col-lg-5">
             <div class="header-menu header-menu-right">
-              <ul class="nav-menu">
+              <ul class="nav-menu pro">
                 <li><a href="#">CORPORATE GOVERNANCE</a></li>
                 <li><a href="#">MEDIA</a></li>
+                <li><a href="#"><i class="pe-7s-search"></i></a></li>
+              </ul>
+              <ul class="nav-menu fun d-none">
+                <li><a href="#">LIFE AT CAMPINA</a></li>
+                <li><a href="#">KONTAK</a></li>
                 <li><a href="#"><i class="pe-7s-search"></i></a></li>
               </ul>
             </div>
@@ -170,8 +182,8 @@
 
     <!-- Canvas Action Start -->
     <div class="canvas-action justify-content-around">
-      <a class="action m-0" href="#">Professional & Corporate</span></a>
-      <a class="action m-0" href="#">Fun Creator</span></a>
+      <a class="action m-0" href="javascript:;" data-type="pro">Professional & Corporate</span></a>
+      <a class="action m-0" href="javascript:;" data-type="fun">Fun Creator</span></a>
     </div>
     <!-- Canvas Action end -->
 
@@ -185,14 +197,19 @@
     <!-- Canvas Menu Start -->
     <div class="canvas-menu">
       <nav>
-        <ul class="nav-menu">
+        <ul class="nav-menu pro">
           <li><a href="#">WHO WE ARE</a></li>
           <li><a href="#">SUSTAINABILITY</a></li>
           <li><a href="#">INVESTOR</a></li>
           <li><a href="#">CORPORATE GOVERNANCE</a></li>
           <li><a href="#">MEDIA</a></li>
         </ul>
-
+        <ul class="nav-menu fun d-none">
+          <li><a href="#">PRODUCT</a></li>
+          <li><a href="#">FUN CREATOR</a></li>
+          <li><a href="#">LIFE AT CAMPINA</a></li>
+          <li><a href="#">KONTAK</a></li>
+        </ul>
       </nav>
     </div>
     <!-- Canvas Menu End -->
@@ -221,6 +238,7 @@
   <div class="bg-primary-light">
     <!-- e-store section -->
     <div id="e-store" style="padding-block: 66px;">
+      <img src="assets/images/campina/parallax-1.png" alt="parallax 1" class="parallax-scroll position-absolute" data-speed=".3">
       <div class="store-wrapper">
         <h2 class="text-center text-white" style="margin-bottom: 44px;">Campina E-store</h2>
         <div class="container-fluid overflow-auto">
@@ -294,6 +312,7 @@
     </div>
     <!-- products section -->
     <div id="products">
+      <img src="assets/images/campina/parallax-2.png" alt="parallax 2" class="parallax-scroll position-absolute end-0" data-speed=".3">
       <div class="main">
         <h2 class="text-center text-white" style="margin-bottom: 44px;">Our Product</h2>
     
@@ -338,7 +357,7 @@
                   <div class="single-product-02">
                     <div class="product-images d-flex align-items-center justify-content-center">
                       <a href="#">
-                        <img src="assets/images/campina/ariel2.png" height="266" class="center"
+                        <img src="assets/images/campina/ariel.png" height="266" class="center"
                           style="max-width: 250px; object-fit: contain;" alt="product">
                         <img src="assets/images/campina/ariel-hover.png" height="266" class="center product-hover-image"
                           style="max-width: 250px; object-fit: contain;" alt="product">
@@ -353,7 +372,7 @@
                   <div class="single-product-02">
                     <div class="product-images d-flex align-items-center justify-content-center">
                       <a href="#">
-                        <img src="assets/images/campina/happy-cow2.png" height="266" class="center"
+                        <img src="assets/images/campina/happy-cow.png" height="266" class="center"
                           style="max-width: 250px; object-fit: contain;" alt="product">
                         <img src="assets/images/campina/happy-cow-hover.png" height="266" class="center product-hover-image"
                           style="max-width: 250px; object-fit: contain;" alt="product">
@@ -383,7 +402,7 @@
                   <div class="single-product-02">
                     <div class="product-images d-flex align-items-center justify-content-center">
                       <a href="#">
-                        <img src="assets/images/campina/cashew2.png" height="266" class="center"
+                        <img src="assets/images/campina/cashew.png" height="266" class="center"
                           style="max-width: 250px; object-fit: contain;" alt="product">
                         <img src="assets/images/campina/cashew-hover.png" height="266" class="center product-hover-image"
                           style="max-width: 250px; object-fit: contain;" alt="product">
@@ -398,7 +417,7 @@
                   <div class="single-product-02">
                     <div class="product-images d-flex align-items-center justify-content-center">
                       <a href="#">
-                        <img src="assets/images/campina/frozen2.png" height="266" class="center"
+                        <img src="assets/images/campina/frozen.png" height="266" class="center"
                           style="max-width: 250px; object-fit: contain;" alt="product">
                         <img src="assets/images/campina/frozen-hover.png" height="266" class="center product-hover-image"
                           style="max-width: 250px; object-fit: contain;" alt="product">
@@ -413,7 +432,7 @@
                   <div class="single-product-02">
                     <div class="product-images d-flex align-items-center justify-content-center">
                       <a href="#">
-                        <img src="assets/images/campina/heart2.png" height="266" class="center"
+                        <img src="assets/images/campina/heart.png" height="266" class="center"
                           style="max-width: 250px; object-fit: contain;" alt="product">
                         <img src="assets/images/campina/heart-hover.png" height="266" class="center product-hover-image"
                           style="max-width: 250px; object-fit: contain;" alt="product">
@@ -443,7 +462,8 @@
 
   <div class="bg-secondary">
     <!-- fun creator section -->
-    <div id="fun-creator">
+    <div id="fun-creator" class="position-relative">
+      <img src="assets/images/campina/parallax-3.png" alt="parallax 3" class="parallax-scroll position-absolute" data-speed=".3">
       <h2 class="text-center text-white">
         <img src="assets/images/campina/youtube.png" alt="youtube logo" height="52" style="margin-right: 26px;">
         Fun Creator
@@ -518,6 +538,7 @@
     </div>
     <!-- become a reseller section -->
     <div id="become-a-reseller" class="container">
+      <img src="assets/images/campina/parallax-4.png" alt="parallax 4" class="parallax-scroll position-absolute end-0" data-speed=".3">
       <div class="row">
         <div class="col-lg-5">
           <img src="assets/images/campina/person-campina.png" alt="person campina" class="person-campina">
@@ -542,48 +563,51 @@
 
   <!-- inside campina section -->
   <div class="bg-primary-light">
-    <div id="inside-campina" class="container">
-      <div class="title d-flex justify-content-between align-items-lg-center">
-        <h2 class="text-white d-lg-flex align-items-center">
-          Inside Campina
-          <div class="badge bg-blue ms-0 ms-lg-4 mt-2 mt-lg-0">
-            <img src="assets/images/campina/instagram.png" height="16" alt="instagram icons">
-            <p style="font-weight: 500; margin-left: 8px;">@lifeatcampina</p>
+    <div id="inside-campina" class="position-relative">
+      <img src="assets/images/campina/parallax-5.png" alt="parallax 5" class="parallax-scroll position-absolute" data-speed=".12">
+      <div class="container">
+        <div class="title d-flex justify-content-between align-items-lg-center">
+          <h2 class="text-white d-lg-flex align-items-center">
+            Inside Campina
+            <div class="badge bg-blue ms-0 ms-lg-4 mt-2 mt-lg-0">
+              <img src="assets/images/campina/instagram.png" height="16" alt="instagram icons">
+              <p style="font-weight: 500; margin-left: 8px;">@lifeatcampina</p>
+            </div>
+          </h2>
+          <a href="life-at-campina.html" style="font-weight: 600; z-index: 1;" class="text-white">Lihat Semua</a>
+        </div>
+        <div class="row mb-5">
+          <div class="col-lg-4 mb-3 mb-lg-0">
+            <div class="inside-campina-item">
+              <img src="assets/images/campina/inside-campina-1.png" alt="inside campina image 1">
+            </div>
           </div>
-        </h2>
-        <a href="life-at-campina.html" style="font-weight: 600;" class="text-white">Lihat Semua</a>
-      </div>
-      <div class="row mb-5">
-        <div class="col-lg-4 mb-3 mb-lg-0">
-          <div class="inside-campina-item">
-            <img src="assets/images/campina/inside-campina-1.png" alt="inside campina image 1">
+          <div class="col-lg-5 mb-3 mb-lg-0">
+            <div class="inside-campina-item">
+              <img src="assets/images/campina/inside-campina-2.png" alt="inside campina image 2">
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="inside-campina-item">
+              <img src="assets/images/campina/inside-campina-3.png" alt="inside campina image 3">
+            </div>
           </div>
         </div>
-        <div class="col-lg-5 mb-3 mb-lg-0">
-          <div class="inside-campina-item">
-            <img src="assets/images/campina/inside-campina-2.png" alt="inside campina image 2">
+        <div class="row">
+          <div class="col-lg-3 mb-3 mb-lg-0">
+            <div class="inside-campina-item">
+              <img src="assets/images/campina/inside-campina-4.png" alt="inside campina image 4">
+            </div>
           </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="inside-campina-item">
-            <img src="assets/images/campina/inside-campina-3.png" alt="inside campina image 3">
+          <div class="col-lg-3 mb-3 mb-lg-0">
+            <div class="inside-campina-item">
+              <img src="assets/images/campina/inside-campina-5.png" alt="inside campina image 5">
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 mb-3 mb-lg-0">
-          <div class="inside-campina-item">
-            <img src="assets/images/campina/inside-campina-4.png" alt="inside campina image 4">
-          </div>
-        </div>
-        <div class="col-lg-3 mb-3 mb-lg-0">
-          <div class="inside-campina-item">
-            <img src="assets/images/campina/inside-campina-5.png" alt="inside campina image 5">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="inside-campina-item">
-            <img src="assets/images/campina/inside-campina-6.png" alt="inside campina image 6">
+          <div class="col-lg-6">
+            <div class="inside-campina-item">
+              <img src="assets/images/campina/inside-campina-6.png" alt="inside campina image 6">
+            </div>
           </div>
         </div>
       </div>
@@ -591,8 +615,9 @@
   </div>
 
   <!-- footer -->
-  <div class="bg-white">
+  <div class="bg-white position-relative">
     <div class="container">
+      <img src="assets/images/campina/parallax-6.png" alt="parallax 6" class="parallax-scroll position-absolute end-0" data-speed=".05">
       <!-- footer top -->
       <div id="footer-top">
         <img src="assets/images/campina/logo-campina.png" height="88" alt="logo campina" class="mb-2">
@@ -651,8 +676,8 @@
   </div>
 
   <!-- floating -->
-  <a href="#" class="position-fixed" style="bottom: 200px; right: 20px;">
-    <img src="assets/images/campina/mitra-campina.png" alt="mitra campina" class="mitra-campina">
+  <a href="#" class="position-fixed mitra-campina">
+    <img src="assets/images/campina/mitra-campina.png" alt="mitra campina">
   </a>
 
   <!--Back To Start-->
@@ -689,6 +714,13 @@
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 
+  <!-- custom -->
+  <script src="assets/js/custom.js"></script>
+
+  <!-- parallax -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js?v=7"></script>
+
   <!-- swipper -->
   <script>
     const swiper = new Swiper('.swiper', {
@@ -718,6 +750,14 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
+
+    gsap.to(".parallax-scroll", {
+      scrollTrigger: {
+        scrub: true,
+      }, 
+      y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+      ease: "none"
     });
   </script>
 
