@@ -24,3 +24,12 @@ const filterMenu = (menus, menuGroup) => {
 
 filterMenu(menus, menuGroup)
 filterMenu(menus2, menuGroup2)
+
+const headerSubMenu = document.querySelectorAll('.header-menu .sub-menu li.menu-item-has-children a:has(+ .sub-sub-menu)')
+
+headerSubMenu.forEach(menu => {
+  menu.addEventListener('click', e => {
+    e.preventDefault()
+    e.target.classList.toggle('active')
+  })
+})
