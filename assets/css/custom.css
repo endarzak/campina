@@ -13,6 +13,7 @@
   --muted: #3F3F3F;
   --gray: #D7D7D7;
   --blue: #2457AB;
+  --dark: #06111F;
   --black: #000000;
   --white: #ffffff;
 }
@@ -138,8 +139,27 @@ h6 {
   color: var(--black);
 }
 
+.btn-outline-white {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.btn-white {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
 .bg-primary-light {
-  background-color: var(--primary-light);
+  background-color: var(--primary-light) !important;
 }
 
 .bg-secondary {
@@ -147,15 +167,23 @@ h6 {
 }
 
 .bg-success {
-  background-color: var(--success);
+  background-color: var(--success) !important;
 }
 
 .bg-blue {
-  background-color: var(--blue);
+  background-color: var(--blue) !important;
 }
 
 .bg-danger {
-  background-color: var(--danger);
+  background-color: var(--danger) !important;
+}
+
+.bg-dark {
+  background-color: var(--dark) !important;
+}
+
+.bg-black {
+  background-color: var(--black);
 }
 
 .text-black {
@@ -177,6 +205,18 @@ h6 {
   padding-inline: 10px;
   padding-block: 5px;
   border-radius: 47px;
+}
+
+#social-icons a .hover {
+  display: none;
+}
+
+#social-icons a:hover .hover {
+  display: block;
+}
+
+#social-icons a:hover img:not(.hover) {
+  display: none;
 }
 
 .black-overlay::before {
@@ -412,39 +452,33 @@ h6 {
 /* ---------- E-STORE ---------- */
 
 .store {
-  margin-bottom: 50px;
+  margin-block: 50px;
+  width: max-content;
 }
 
 .store-highlight {
-  background-color: var(--secondary);
+  background-color: var(--primary-light);
   border-radius: 18px;
   box-shadow: 12px 12px 0px 0px var(--secondary-dark);
-  width: 349px;
-  height: 376px;
   overflow: hidden;
-  display: none;
+  height: 100%;
+}
+
+.store-highlight .store-highlight-image {
+  width: 200px;
 }
 
 .store-highlight .store-highlight-content {
   padding-top: 27px;
-  padding-inline: 49px;
 }
 
 .store-highlight .store-highlight-content .store-highlight-text {
   color: var(--white);
-  font-size: 24px;
+  font-size: 38px;
   font-weight: 900;
-  line-height: 103%;
+  line-height: 39.14px;
   text-align: left;
-}
-
-.store-highlight .store-highlight-content .store-highlight-title {
-  color: var(--white);
-  text-shadow: 0px 5px 0px 0px var(--secondary-dark);
-  font-size: 80px;
-  font-weight: 900;
-  line-height: 1;
-  text-align: left;
+  margin-bottom: 42px;
 }
 
 /* ---------- PRODUCT ---------- */
@@ -452,40 +486,33 @@ h6 {
 .store-product {
   font-family: 'Nunito', sans-serif !important;
   border-radius: 18px;
-  background: var(--white);
-  padding: 0;
-  width: 230px;
+  padding: 22px;
 }
 
 .store-product .store-product-image img {
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
   width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.store-product .store-product-content {
-  padding: 18px;
+  height: 170px;
+  object-fit: contain;
 }
 
 .store-product .store-product-content .store-product-content-title {
-  color: var(--black);
+  color: var(--white);
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
   margin-bottom: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: center;
 }
 
 .store-product .store-product-content .store-product-content-price {
-  color: var(--black);
+  color: var(--white);
   font-size: 16px;
   font-weight: 900;
   line-height: 22px;
   margin-bottom: 26px;
+  text-align: center;
 }
 
 /* products */
@@ -520,6 +547,22 @@ h6 {
   font-size: 18px !important;
   font-weight: 900;
   line-height: 27px;
+}
+
+.swiper-creator {
+  padding-block: 24px;
+}
+
+.swiper-creator .swiper-slide-prev,
+.swiper-creator .swiper-slide-next {
+  opacity: .4;
+}
+
+.swiper-creator .product-content .title a {
+  font-size: 24px !important;
+  font-weight: 900;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 /* ---------- RESELLER ---------- */
@@ -791,9 +834,12 @@ h6 {
   height: 333px;
 }
 
-#fun-creator,
 #inside-campina {
   padding-block: 66px;
+}
+
+#fun-creator {
+  padding-bottom: 100px;
 }
 
 #fun-creator h2 {
@@ -885,15 +931,21 @@ h6 {
     padding-inline: 175px;
   }
 
-  .store-highlight {
-    display: block;
+  .store {
+    width: unset;
   }
 
-  .store-product-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
+  .store-highlight .store-highlight-image {
+    width: unset;
+  }
+
+  .swiper-creator {
+    padding-block: 36px;
+  }
+
+  .swiper-creator .product-content .title a {
+    font-size: 50px !important;
+    line-height: 55px;
   }
 
   .become-a-reseller .become-a-reseller-decoration {
@@ -910,10 +962,6 @@ h6 {
   #become-a-reseller {
     padding-top: 155px;
     padding-bottom: 150px;
-  }
-
-  #fun-creator {
-    padding-block: 126px;
   }
 
   #fun-creator h2 {
