@@ -1047,3 +1047,34 @@ h6 {
     width: unset;
   }
 }
+
+/* corporate */
+#founder-message .part,
+#news-event {
+  padding-block: 66px;
+}
+
+#news-event h3 {
+  position: relative;
+  width: fit-content;
+}
+
+#news-event h3::after {
+  content: '';
+  width: 50%;
+  height: 5px;
+  background-color: var(--white);
+  position: absolute;
+  display: block;
+  bottom: -10px;
+}
+
+#news-event .swiper-button-prev,
+#news-event .swiper-button-next {
+  top: 0;
+}
+
+#news-event .swiper-button-prev {
+  right: 70px;
+  left: auto;
+}
