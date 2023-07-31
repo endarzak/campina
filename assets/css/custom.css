@@ -1065,6 +1065,10 @@ h6 {
 }
 
 /* corporate */
+#founder-message {
+  overflow: hidden;
+}
+
 #founder-message .part,
 #news-event {
   padding-block: 66px;
