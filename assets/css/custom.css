@@ -433,7 +433,17 @@ h6 {
 
 .hero-video {
   height: 500px;
-  width: auto;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.hero.parallax {
+  height: 500px;
+}
+
+.parallax .hero-video {
+  position: fixed;
+  z-index: -1;
 }
 
 /* ---------- PAGE TITLE ---------- */
@@ -922,9 +932,15 @@ h6 {
     font-size: 20px;
   }
 
+  .hero.parallax {
+    min-height: 100vh;
+  }
+
   .hero-video {
+    min-height: 100vh;
     height: auto;
     width: 100%;
+    object-fit: cover;
   }
 
   .store-wrapper {
