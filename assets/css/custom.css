@@ -228,6 +228,16 @@ h6 {
   background: rgba(0, 0, 0, .35);
 }
 
+.black-overlay-radius::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .35);
+  border-radius: 10px;
+}
+
 .nav-tabs .nav-link {
   border-radius: 0;
   border: none;
