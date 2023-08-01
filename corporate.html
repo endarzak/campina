@@ -501,11 +501,11 @@
   </div>
 
   <!-- founder message -->
-  <div id="founder-message"class="bg-white">
-    <div class="part row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0">
+  <div id="founder-message" class="bg-white">
+    <div class="animate-1 p-0 flex-nowrap part row align-items-center" style="transition: all 2s;">
+      <div class="image col-lg-12 mb-4 mb-lg-0" style="transition: all 2s; transition-delay: 2s;">
         <div class="d-flex align-items-start">
-          <img src="assets/images/campina/bg-product.png" alt="founder message" height="576" style="object-fit: cover;">
+          <img src="assets/images/campina/bg-product.png" alt="founder message" height="700" style="object-fit: cover;" style="transition: all 2s; transition-delay: 1s;">
         </div>
       </div>
       <div class="col-lg-6">
@@ -519,8 +519,8 @@
         </div>
       </div>
     </div>
-    <div class="part row flex-column-reverse flex-lg-row align-items-center">
-      <div class="col-lg-6">
+    <div class="animate-2 p-0 flex-nowrap part row flex-column-reverse flex-lg-row align-items-center" style="transition: all 2s;">
+      <div class="copywrite col-lg-6" style="transition: all 2s; transform: translateX(-100%);">
         <div class="container-fluid">
           <h2 class="text-primary-light mb-5">Company Overview</h2>
           <p class="text-black" style="font-weight: 500;">We are one of the leading ice cream manufacturers in Indonesia, with an extended line of products that always win our customer’s hearts. We innovate to create happiness and pleasure, by inventing specially crafted products made from hygienic, high quality – natural ingredients. It is our goal to make our customers enjoying life by a great ingredient in our products that benefit all.</p>
@@ -529,9 +529,9 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="image col-lg-12 mb-4 mb-lg-0" style="transition: all 2s; transform: translateX(-50%);">
         <div class="d-flex justify-content-end">
-          <img src="assets/images/campina/company-overview.png" alt="founder message" height="576" style="object-fit: cover;">
+          <img src="assets/images/campina/company-overview.png" alt="founder message" height="700" style="object-fit: cover; width: 100%;" style="transition: all 2s;">
         </div>
       </div>
     </div>
@@ -810,6 +810,32 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
+    });
+  </script>
+
+  <script>
+    const founderMessage = document.querySelector('#founder-message .animate-1')
+    const companyOverview = document.querySelector('#founder-message .animate-2')
+
+    window.addEventListener("scroll", (event) => {
+      let scroll = this.scrollY;
+      if (scroll > 700) {
+        founderMessage.classList.remove('p-0')
+        founderMessage.querySelector('.image').classList.remove('col-lg-12')
+        founderMessage.querySelector('.image').classList.add('col-lg-6')
+        founderMessage.querySelector('img').setAttribute('height', '576')
+      }
+      if (scroll > 1200) {
+        companyOverview.classList.remove('p-0')
+        companyOverview.setAttribute('style', 'transform: translateX(0); transition: all 2s;')
+        setTimeout(() => {
+          companyOverview.querySelector('.copywrite').setAttribute('style', 'transform: translateX(0); transition: all 2s;')
+          companyOverview.querySelector('.image').setAttribute('style', 'transform: translateX(0); transition: all 2s;')
+          companyOverview.querySelector('.image').classList.remove('col-lg-12')
+          companyOverview.querySelector('.image').classList.add('col-lg-6')
+        }, 2000);
+        companyOverview.querySelector('img').setAttribute('height', '576')
+      }
     });
   </script>
 
