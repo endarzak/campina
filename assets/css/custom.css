@@ -527,7 +527,7 @@ h6 {
 
 /* products */
 #products {
-  background-image: url('/assets/images/campina/Vector.png');
+  background-image: url('../images/campina/Vector.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
@@ -544,7 +544,7 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url('/assets/images/campina/back-product-hover.png');
+  background-image: url('../images/campina/back-product-hover.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -679,7 +679,7 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url('/assets/images/campina/back-product.png');
+  background-image: url('../images/campina/back-product.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -689,12 +689,12 @@ h6 {
 }
 
 .product-tabs-content .product-tabs-content-item:hover::before {
-  background-image: url('/assets/images/campina/back-product-hover.png');
+  background-image: url('../images/campina/back-product-hover.png');
   transition: all ease-in-out 300ms;
 }
 
 .product-tabs-content .product-tabs-content-item:nth-child(even):hover::before {
-  background-image: url('/assets/images/campina/back-product-hover-center.png');
+  background-image: url('../images/campina/back-product-hover-center.png');
   transition: all ease-in-out 300ms;
 }
 
@@ -709,7 +709,7 @@ h6 {
 
 .fun-creator-page-content {
   background-color: var(--secondary);
-  background-image: url('/assets/images/campina/bg-fun-creator-content.png');
+  background-image: url('../images/campina/bg-fun-creator-content.png');
 }
 
 .fun-creator-page-content-menu a {
@@ -823,7 +823,7 @@ h6 {
   content: '';
   position: absolute;
   display: block;
-  background-image: url('/assets/images/campina/decoration-star.png');
+  background-image: url('../images/campina/decoration-star.png');
   background-repeat: no-repeat;
   top: 0;
   right: 0;
@@ -836,7 +836,7 @@ h6 {
   content: '';
   position: absolute;
   display: block;
-  background-image: url('/assets/images/campina/decoration-star-2.png');
+  background-image: url('../images/campina/decoration-star-2.png');
   background-repeat: no-repeat;
   bottom: 0;
   left: 0;
