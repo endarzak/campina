@@ -502,10 +502,11 @@
 
   <!-- founder message -->
   <div id="founder-message" class="bg-white">
-    <div class="animate-1 p-0 flex-nowrap part row align-items-center" style="transition: all 2s;">
+    <div class="animate-1 p-lg-0 flex-lg-nowrap part row align-items-center" style="transition: all 2s;">
       <div class="image col-lg-12 mb-4 mb-lg-0" style="transition: all 2s; transition-delay: 2s;">
         <div class="d-flex align-items-start">
-          <img src="assets/images/campina/bg-product.png" alt="founder message" height="700" style="object-fit: cover;" style="transition: all 2s; transition-delay: 1s;">
+          <img src="assets/images/campina/bg-product.png" alt="founder message" class="d-none d-lg-block" height="700" style="object-fit: cover;" style="transition: all 2s; transition-delay: 1s;">
+          <img src="assets/images/campina/bg-product.png" alt="founder message" class="d-lg-none" height="576" style="object-fit: cover;">
         </div>
       </div>
       <div class="col-lg-6">
@@ -816,15 +817,17 @@
   <script>
     const founderMessage = document.querySelector('#founder-message .animate-1')
 
-    window.addEventListener("scroll", (event) => {
-      let scroll = this.scrollY;
-      if (scroll > 700) {
-        founderMessage.classList.remove('p-0')
-        founderMessage.querySelector('.image').classList.remove('col-lg-12')
-        founderMessage.querySelector('.image').classList.add('col-lg-6')
-        founderMessage.querySelector('img').setAttribute('height', '576')
-      }
-    });
+    if (window.innerWidth > 992) {
+      window.addEventListener("scroll", (event) => {
+        let scroll = this.scrollY;
+        if (scroll > 700) {
+          founderMessage.classList.remove('p-lg-0')
+          founderMessage.querySelector('.image').classList.remove('col-lg-12')
+          founderMessage.querySelector('.image').classList.add('col-lg-6')
+          founderMessage.querySelector('img').setAttribute('height', '576')
+        }
+      });
+    }
   </script>
 
 </body>
