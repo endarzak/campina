@@ -706,6 +706,11 @@ h6 {
   padding-bottom: 200px;
 }
 
+.product-detail-page-content {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .product-page-content {
   background-color: #DBF3FF;
 }
@@ -764,6 +769,8 @@ h6 {
   height: 266px;
   max-width: 250px;
   object-fit: contain;
+}
+.product-tabs-content .product-tabs-content-item a {
   z-index: 1;
 }
 
@@ -936,6 +943,17 @@ h6 {
   position: relative;
   right: unset;
   left: unset;
+}
+
+.swiper-thumbs .swiper-slide {
+  cursor: pointer;
+  padding: 22px 7px 19px 7px;
+  border-radius: 6px;
+  border: 2px;
+}
+
+.swiper-thumbs .swiper-slide-thumb-active {
+  border: 1px solid var(--secondary);
 }
 
 #become-a-reseller {
