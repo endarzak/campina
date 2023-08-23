@@ -77,8 +77,8 @@ h6 {
   letter-spacing: 0em;
   color: var(--black);
   padding: 16px;
-  border: none;
-  border-bottom: 2px solid var(--black) !important;
+  border-radius: 10px;
+  border: 1px solid #BDBDBD
 }
 
 .input:focus {
@@ -280,6 +280,16 @@ h6 {
   width: 100%;
   height: 100%;
   background: linear-gradient(0, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 10px;
+}
+
+.gradient-overlay::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #613640 0%, rgba(217, 217, 217, 0) 100%);
   border-radius: 10px;
 }
 
