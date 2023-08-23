@@ -309,6 +309,10 @@ h6 {
   border-bottom: 2px solid var(--primary);
 }
 
+.accordion-button.no-icon::after {
+  display: none;
+}
+
 /* ---------- TOPBAR ---------- */
 
 .topbar {
