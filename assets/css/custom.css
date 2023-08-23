@@ -313,6 +313,11 @@ h6 {
   display: none;
 }
 
+nav.sidebar .nav-link.active {
+  border-left: 6px solid var(--primary-light);
+  font-weight: 700;
+}
+
 /* ---------- TOPBAR ---------- */
 
 .topbar {
