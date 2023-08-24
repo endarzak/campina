@@ -1106,6 +1106,10 @@ nav.sidebar .nav-link.active {
     text-transform: capitalize;
   }
 
+  .text-lg-left {
+    text-align: left !important;
+  }
+
   .hero.parallax {
     min-height: 100vh;
   }
