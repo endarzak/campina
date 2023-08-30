@@ -319,6 +319,35 @@ nav.sidebar .nav-link:hover {
   font-weight: 700;
 }
 
+.dropdown-search {
+  margin-right: unset !important;
+  margin-left: unset !important;
+  display: none !important;
+  transform: translate(0, 0) !important;
+}
+
+.dropdown-search.show {
+  position: absolute !important;
+  inset: unset !important;
+  right: 0 !important;
+  min-width: 20rem !important;
+  transform: translate(0, 30px) !important;
+  margin-right: unset !important;
+  margin-left: unset !important;
+  display: block !important;
+  margin-top: 15px;
+  border-radius: 14px;
+}
+
+.dropdown-search input {
+  border-radius: 14px;
+  color: var(--danger);
+}
+
+.dropdown-search input::placeholder {
+  color: var(--danger);
+}
+
 /* ---------- TOPBAR ---------- */
 
 .topbar {
