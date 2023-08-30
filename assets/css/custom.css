@@ -313,7 +313,8 @@ h6 {
   display: none;
 }
 
-nav.sidebar .nav-link.active {
+nav.sidebar .nav-link.active,
+nav.sidebar .nav-link:hover {
   border-left: 6px solid var(--primary-light);
   font-weight: 700;
 }
