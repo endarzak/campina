@@ -348,6 +348,38 @@ nav.sidebar .nav-link:hover {
   color: var(--danger);
 }
 
+.accordion#faq .accordion-button {
+  display: flex;
+  align-items: flex-start;
+}
+
+.accordion#faq .accordion-button:not(.collapsed) {
+  color: var(--black);
+  background-color: unset;
+}
+
+.accordion#faq .accordion-button::before {
+  content: '-';
+  display: block;
+  margin-right: 29px;
+  line-height: 1.1;
+  font-size: 23px;
+  color: var(--primary);
+}
+
+.accordion#faq .accordion-button.collapsed::before {
+  content: '+';
+  display: block;
+  margin-right: 26px;
+  line-height: 1.1;
+  font-size: 23px;
+  color: var(--primary);
+}
+
+.accordion#faq .accordion-body {
+  padding-left: 60px;
+}
+
 /* ---------- TOPBAR ---------- */
 
 .topbar {
