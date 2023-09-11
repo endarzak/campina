@@ -1303,6 +1303,27 @@ nav.sidebar .nav-link:hover {
   .parallax-scroll {
     width: unset;
   }
+
+  .swiper-button-reveal .swiper-button-prev,
+  .swiper-button-reveal .swiper-button-next {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+
+  .swiper-button-reveal .swiper-button-prev {
+    transform: translateX(-5px);
+  }
+
+  .swiper-button-reveal .swiper-button-next {
+    transform: translateX(5px);
+  }
+
+  .swiper-button-reveal:hover .swiper-button-prev,
+  .swiper-button-reveal:hover .swiper-button-next {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .5s ease-in-out;
+  }
 }
 
 /* corporate */
