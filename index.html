@@ -330,7 +330,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-8 mt-5 mt-lg-0">
+            <div class="col-lg-8 mt-5 mt-lg-0 position-relative">
               <div class="store-product-wrapper">
                 <div class="swiper-e-store overflow-hidden">
                   <div class="swiper-wrapper">
@@ -371,6 +371,9 @@
                       </div>
                     </div>
                   </div>
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                 </div>
               </div>
             </div>
@@ -831,6 +834,10 @@
           640: {
             slidesPerView: 3,
           }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
     });
 
