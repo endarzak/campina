@@ -317,9 +317,9 @@
     <div id="e-store" class="bg-secondary" style="padding-block: 66px;">
       <img src="assets/images/campina/parallax-1.png" alt="parallax 1" class="parallax-scroll position-absolute" data-speed=".3">
       <div class="store-wrapper">
-        <div class="container overflow-auto">
-          <div class="store row">
-            <div class="col-3 col-lg-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
               <div class="store-highlight d-flex flex-column justify-content-between">
                 <div class="store-highlight-content px-5">
                   <p class="store-highlight-text">Campina<br/>E-Store</br>
@@ -330,42 +330,44 @@
                 </div>
               </div>
             </div>
-            <div class="col-9 col-lg-8">
+            <div class="col-lg-8 mt-5 mt-lg-0">
               <div class="store-product-wrapper">
-                <div class="row">
-                  <div class="col-4">
-                    <div class="store-product bg-primary-light position-relative">
-                      <div class="store-product-image">
-                        <img src="assets/images/campina/product-Chocolate-Vanilla-Choco-Chunk.png" alt="choco stroberry">
-                      </div>
-                      <div class="store-product-content">
-                        <h5 class="store-product-content-title">Chocolate Vanilla<br/>Choco Chunk</h5>
-                        <h6 class="store-product-content-price">Rp 3.000</h6>
-                        <a href="" class="btn btn-outline-white btn-block">Lihat Detail</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="store-product bg-danger position-relative">
-                      <div class="store-product-image">
-                        <img src="assets/images/campina/product-Concerto-Midi-Strawberry.png" alt="choco stroberry">
-                      </div>
-                      <div class="store-product-content">
-                        <h5 class="store-product-content-title">Concerto Midi<br/>Strawberry</h5>
-                        <h6 class="store-product-content-price">Rp 3.000</h6>
-                        <a href="" class="btn btn-outline-white btn-block">Lihat Detail</a>
+                <div class="swiper-e-store overflow-hidden">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide px-2">
+                      <div class="store-product bg-primary-light position-relative">
+                        <div class="store-product-image">
+                          <img src="assets/images/campina/product-Chocolate-Vanilla-Choco-Chunk.png" alt="choco stroberry">
+                        </div>
+                        <div class="store-product-content">
+                          <h5 class="store-product-content-title">Chocolate Vanilla<br/>Choco Chunk</h5>
+                          <h6 class="store-product-content-price">Rp 3.000</h6>
+                          <a href="" class="btn btn-outline-white btn-block">Beli Sekarang</a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="store-product bg-primary position-relative">
-                      <div class="store-product-image">
-                        <img src="assets/images/campina/product-hula-hula-kacang-hijau.png" alt="choco stroberry">
+                    <div class="swiper-slide px-2">
+                      <div class="store-product bg-danger position-relative">
+                        <div class="store-product-image">
+                          <img src="assets/images/campina/product-Concerto-Midi-Strawberry.png" alt="choco stroberry">
+                        </div>
+                        <div class="store-product-content">
+                          <h5 class="store-product-content-title">Concerto Midi<br/>Strawberry</h5>
+                          <h6 class="store-product-content-price">Rp 3.000</h6>
+                          <a href="" class="btn btn-outline-white btn-block">Beli Sekarang</a>
+                        </div>
                       </div>
-                      <div class="store-product-content">
-                        <h5 class="store-product-content-title">Hula Hula<br/>Kacang Hijau</h5>
-                        <h6 class="store-product-content-price">Rp 3.000</h6>
-                        <a href="" class="btn btn-outline-white btn-block">Lihat Detail</a>
+                    </div>
+                    <div class="swiper-slide px-2">
+                      <div class="store-product bg-primary position-relative">
+                        <div class="store-product-image">
+                          <img src="assets/images/campina/product-hula-hula-kacang-hijau.png" alt="choco stroberry">
+                        </div>
+                        <div class="store-product-content">
+                          <h5 class="store-product-content-title">Hula Hula<br/>Kacang Hijau</h5>
+                          <h6 class="store-product-content-price">Rp 3.000</h6>
+                          <a href="" class="btn btn-outline-white btn-block">Beli Sekarang</a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -818,6 +820,17 @@
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+    });
+
+    const swiperEStore = new Swiper('.swiper-e-store', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+          }
         },
     });
 
