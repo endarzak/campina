@@ -1360,3 +1360,18 @@ nav.sidebar .nav-link:hover {
   right: 70px;
   left: auto;
 }
+
+/* Image Product Detail */
+
+.img-detail {
+  height: 400px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.img-detail-size {
+  width: auto;
+  height: -webkit-fill-available;
+}
